@@ -74,7 +74,7 @@ shasum -a 256 -c SHA256SUMS
 2. **Activate** — `orkai activate ORKAI_your_key_here`
 3. **First run** — `orkai serve` (interactive setup wizard)
 4. **Daily use** — `orkai start` / `orkai stop` / `orkai open`
-5. **Connect your editor** — `orkai mcp-config` → paste into Cursor MCP settings
+5. **Connect your editor** — `orkai mcp-config` → paste the section for your client (Cursor, Claude Desktop, …)
 
 Full walkthrough: [getorkai.com/docs/quick-start](https://getorkai.com/docs/quick-start)
 
