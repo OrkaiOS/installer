@@ -71,10 +71,11 @@ shasum -a 256 -c SHA256SUMS
 ## After install
 
 1. **Get a license** — [getorkai.com/pricing](https://getorkai.com/pricing)
-2. **Activate** — `orkai activate ORKAI_your_key_here`
-3. **First run** — `orkai serve` (interactive setup wizard)
-4. **Daily use** — `orkai start` / `orkai stop` / `orkai open`
-5. **Connect your editor** — `orkai mcp-config` → paste the section for your client (Cursor, Claude Desktop, …)
+2. **Get your key from the Polar email** — after checkout, Polar emails a receipt. The email does NOT include the key inline. Click the **Access Purchase** button in the email to view your key on Polar's dashboard. Keys start with `ORKAI_`.
+3. **Activate** — `orkai activate ORKAI_your_key_here`
+4. **First run** — `orkai serve` (interactive setup wizard)
+5. **Daily use** — `orkai start` / `orkai stop` / `orkai open`
+6. **Connect your editor** — `orkai mcp-config` → paste the section for your client (Cursor, Claude Desktop, …)
 
 Full walkthrough: [getorkai.com/docs/quick-start](https://getorkai.com/docs/quick-start)
 

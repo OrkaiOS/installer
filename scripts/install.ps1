@@ -23,10 +23,18 @@ function Get-DownloadUrl {
 
 function Ensure-UserPath([string]$Dir) {
     $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
-    if ($userPath -notlike "*$Dir*") {
-        [Environment]::SetEnvironmentVariable("Path", "$userPath;$Dir", "User")
+    $inRegistry = $userPath -and ($userPath -split ";" -contains $Dir)
+    if (-not $inRegistry) {
+        $newPath = if ($userPath) { "$userPath;$Dir" } else { $Dir }
+        [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
+        Write-Host "Added $Dir to user PATH."
+    }
+    # Always sync the current session — VS Code / Windows Terminal
+    # terminals inherit a stale env from their parent process, so even
+    # if the registry already has the path, this session may not.
+    $sessionPath = $env:Path -split ";"
+    if ($sessionPath -notcontains $Dir) {
         $env:Path = "$env:Path;$Dir"
-        Write-Host "Added $Dir to user PATH (restart terminal if orkai is not found)"
     }
 }
 
@@ -51,4 +59,8 @@ Next steps:
   3. orkai serve          # first-run setup, then use orkai start
 
 Indexing, serve, and other write/compute commands require a valid license.
+
+If 'orkai' is not recognized in THIS terminal, run:
+  $env:Path = [Environment]::GetEnvironmentVariable('Path','User') + ';' + [Environment]::GetEnvironmentVariable('Path','Machine')
+Or open a new terminal window.
 "@
