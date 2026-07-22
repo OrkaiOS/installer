@@ -1,8 +1,10 @@
 # orkai — install
 
-Official **orkai** CLI binaries for **macOS**, **Linux**, and **Windows.
+Official **orkai** CLI binaries for **macOS**, **Linux**, and **Windows**.
 
-[orkai](https://getorkai.com) is local AI memory for coding agents — a single binary with an embedded dashboard and MCP server for **Cursor**, **Claude Code**, **Windsurf**, and other MCP clients. Everything stays on your machine.
+**orkai** keeps your engineering workflow with you across every AI coding tool — **Claude**, **Cursor**, **Codex**, and **OpenCode**. AI tools will change; your process won't. Everything runs on your machine.
+
+**[Start free trial →](https://getorkai.com/pricing)**
 
 | | |
 |---|---|
@@ -12,7 +14,7 @@ Official **orkai** CLI binaries for **macOS**, **Linux**, and **Windows.
 | **Install guide** | [getorkai.com/docs/install](https://getorkai.com/docs/install) |
 | **Support** | [support@getorkai.com](mailto:support@getorkai.com) |
 
-> **License required.** Installing the binary does **not** include a license. Get a key from [getorkai.com/pricing](https://getorkai.com/pricing) (free 7-day trial or paid), then run `orkai activate <KEY>`. Read-only commands work without activation; `serve`, `index`, and other write/compute paths require a valid license.
+> **License required.** Installing the binary does **not** include a license. Start a free 7-day trial or buy a key at [getorkai.com/pricing](https://getorkai.com/pricing), then run `orkai activate <KEY>`. Read-only commands work without activation; `serve`, `index`, and other write/compute paths require a valid license.
 
 ---
 
@@ -75,7 +77,7 @@ shasum -a 256 -c SHA256SUMS
 3. **Activate** — `orkai activate ORKAI_your_key_here`
 4. **First run** — `orkai serve` (interactive setup wizard)
 5. **Daily use** — `orkai start` / `orkai stop` / `orkai open`
-6. **Connect your editor** — `orkai mcp-config` → paste the section for your client (Cursor, Claude Desktop, …)
+6. **Connect your editor** — `orkai mcp-config` → paste the section for your client (Claude Code, Cursor, Codex, …)
 
 Full walkthrough: [getorkai.com/docs/quick-start](https://getorkai.com/docs/quick-start)
 
