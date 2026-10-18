@@ -91,7 +91,7 @@ verify_checksum() {
 }
 
 main() {
-  local asset url tmpdir dest use_sudo=0
+  local asset url dest use_sudo=0
   asset="$(detect_asset)"
   url="$(download_url "${asset}")"
   dest="$(pick_install_dir)"

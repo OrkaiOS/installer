@@ -77,8 +77,8 @@ shasum -a 256 -c SHA256SUMS
 3. **Activate** — `orkai activate ORKAI_your_key_here`
 4. **Start** — `orkai start` writes defaults, starts the daemon, and opens the web setup hub (`/setup`)
 5. **Web setup** — choose Embeddings (and optional Review / Work / Annotations), then **Save and restart**
-6. **Project** — `orkai init` in a project folder
-7. **Connect your editor** — `orkai mcp-config` → paste the section for your client (Claude Code, Cursor, Codex, …)
+6. **Project** — in a project folder, one of: `orkai init`, `orkai init -y`, `orkai init --starter-pack`, `orkai init -y --starter-pack`
+7. **Connect your editor** — `orkai mcp-config` → paste the section for your client (Claude Code, Cursor, VS Code Copilot, Codex, …). VS Code: `orkai mcp-config --client vscode`
 8. **Daily use** — `orkai start` / `orkai stop` / `orkai open`
 
 TTY-only first-run: `orkai setup --terminal`. After unlock, `orkai config embedding` still works.
